@@ -408,6 +408,9 @@ public class AutoConfigurationImportSelector
 			this.resourceLoader = resourceLoader;
 		}
 
+		/**
+		 * 搜集所有的自动配置文件spring.handler配置的
+		 */
 		@Override
 		public void process(AnnotationMetadata annotationMetadata,
 				DeferredImportSelector deferredImportSelector) {
@@ -425,6 +428,10 @@ public class AutoConfigurationImportSelector
 			}
 		}
 
+		/**
+		 * 处理所有已经搜集的配置，创建bean对象，交给spring容器管理
+		 * @return
+		 */
 		@Override
 		public Iterable<Entry> selectImports() {
 			if (this.autoConfigurationEntries.isEmpty()) {

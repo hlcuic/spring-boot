@@ -311,6 +311,7 @@ public class SpringApplication {
 			exceptionReporters = getSpringFactoriesInstances(
 					SpringBootExceptionReporter.class,
 					new Class[] { ConfigurableApplicationContext.class }, context);
+			// 在这里加载xml配置信息或者是注解信息，然后封装成beanDefinition对象，完成注册
 			prepareContext(context, environment, listeners, applicationArguments,
 					printedBanner);
 			refreshContext(context);
