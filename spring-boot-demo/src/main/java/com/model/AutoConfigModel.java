@@ -17,5 +17,6 @@ public class AutoConfigModel {
 		sb.append("id='").append(id).append('\'');
 		sb.append('}');
 		return sb.toString();
+
 	}
 }
